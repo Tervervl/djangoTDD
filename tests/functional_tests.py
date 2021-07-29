@@ -37,10 +37,24 @@ class NewVisitorTest(unittest.TestCase):
         # содержит "1: Купить павлиньи перья" в качестве элемента списка
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
+        # Текстовое поле по-прежнему приглашает ее добавить еще один элемент. Она
+        # вводит "Сделать мушку из павлиньих перьев" (Эдит очень методична)
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox.send_keys('Сделать мушку из павлиньих перьев')
+        inputbox.send_keys(Keys.ENTER)
+        time.sleep(1)
+        # Страница снова обновляется и теперь показывает оба элемента ее списка
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
-        self.assertTrue(any(row.text == '1: Купить павлиньи перья' for row in rows),
-                        "Новый элемент списка не появился в таблице")
+        table = self.browser.find_element_by_id('id_list_table')
+        rows = table.find_elements_by_tag_name('tr')
+        self.assertIn('1: Купить павлиньи перья',
+                      [row.text for row in rows],
+                      f"Новый элемент списка не появился в таблице. Содержимым было \n{table.text}")
+        self.assertIn(' Сделать мушку из павлиньих перьев',
+                      [row.text for row in rows],
+                      f"Новый элемент списка не появился в таблице. Содержимым было \n{table.text}")
+
         # Текстовое поле по-прежнему приглашает ее добавить еще один элемент.
         # Она вводит "Сделать мушку из павлиньих перьев"
         # (Эдит очень методична)
