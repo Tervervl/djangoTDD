@@ -8,7 +8,11 @@ python manage.py runserver
 ### Создание базы данных и регистрация суперпользователя
 
 python manage.py migrate  
-python manage.py createsuperuser
+python manage.py createsuperuser  
+
+##### Создаёт миграцию базы данных:  
+
+python manage.py makemigrations 
 
 ### Запуск тестов
 
