@@ -17,7 +17,8 @@ python manage.py makemigrations
 ### Запуск тестов
 
 python manage.py test - модульные тесты  
-python tests\functional_tests.py - функциональные тесты
+python tests\functional_tests.py - функциональные тесты  
+python ./tests/functional_tests.py - функциональные тесты для Линукс
 
 ### Git
 
