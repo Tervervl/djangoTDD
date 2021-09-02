@@ -1,5 +1,10 @@
 ## Курс по книге Python разработка на основе тестирования
 
+## Установка geckodriver:
+
+Скачать драйвер по ссылке https://github.com/mozilla/geckodriver/releases  
+распаковать и скопировать в папку /bin командоq sudo copy geckodriver /bin
+
 ## Используемые команды:
 
 #### Запуск тестового сервера
@@ -22,10 +27,11 @@ python manage.py makemigrations
 
 #### Запуск тестов
 
-python manage.py test - модульные тесты  
+python manage.py test - запуск функциональных и модульных тестов  
 python tests\functional_tests.py - функциональные тесты  
 python ./tests/functional_tests.py - функциональные тесты для Линукс  
-python manage.py test functional_tests - запуск функционального теста после рефакторинга
+python manage.py test functional_tests - запуск функционального теста после рефакторинга  
+python manage.py test lists - запуск только модульных тестов
 
 #### Git
 
