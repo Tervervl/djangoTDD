@@ -3,7 +3,8 @@
 ## Установка geckodriver:
 
 Скачать драйвер по ссылке https://github.com/mozilla/geckodriver/releases  
-распаковать и скопировать в папку /bin командоq sudo copy geckodriver /bin
+распаковать и скопировать в папку /bin командой sudo copy geckodriver /bin  
+geckodriver --version - проверить работоспособность драйвера 
 
 ## Используемые команды:
 
