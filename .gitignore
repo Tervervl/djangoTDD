@@ -1,5 +1,5 @@
 /db.sqlite3
 /geckodriver.log
-/tests/geckodriver.log
+/functional_tests/geckodriver.log
 /.idea/
 /djangoTDD/__pycache__/

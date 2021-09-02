@@ -24,7 +24,8 @@ python manage.py makemigrations
 
 python manage.py test - модульные тесты  
 python tests\functional_tests.py - функциональные тесты  
-python ./tests/functional_tests.py - функциональные тесты для Линукс
+python ./tests/functional_tests.py - функциональные тесты для Линукс  
+python manage.py test functional_tests - запуск функционального теста после рефакторинга
 
 #### Git
 
