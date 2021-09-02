@@ -60,8 +60,8 @@ class NewVisitorTest(unittest.TestCase):
         # выводится небольшой текст с объяснениями.
         # Она посещает этот URL-адрес – ее список по-прежнему там.
         # Удовлетворенная, она снова ложится спать
-        self.fail('Закончить тест!')
+        # self.fail('Закончить тест!')
 
 
 if __name__ == '__main__':
-    unittest.main(warnings='ignore')
+    unittest.main()
